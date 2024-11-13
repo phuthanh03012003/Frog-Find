@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Frog Find",
+    "version": "1.0",
+    "description": "Summarizes website content and provides keyword search.",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
